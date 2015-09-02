@@ -7,7 +7,7 @@ const BestPracticesStore = Reflux.createStore({
 	listenables: [bestPracticesActions],
 
 	init: function() {
-		Parse.initialize('Yya18e2HqyVrAoT1YzYXa3TqYZhSfz2ij4ysFxaW', 'OG3pSDuI5AT5KiN8akUFJNqTXBG6iXcpkBFENOSQ');	
+		Parse.initialize('KEY','KEY');	
 	},
 
 	fetchBestPracticesData: function() {
