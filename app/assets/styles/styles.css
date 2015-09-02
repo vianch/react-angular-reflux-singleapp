@@ -1,0 +1,384 @@
+@import "libs/reset.css";
+@import "libs/loader.css";
+@import "libs/fullcalendar.css";
+@import "libs/font-awesome.css";
+@import "libs/bootstrap.css";
+@import "libs/codemirror.css";
+@import "fonts/lato.css";
+.np-normal-font {
+  font-family: 'latoregular', sans-serif;
+}
+/* CSS DIRECTORY
+  0. =COMMONS
+  1. =HEADER
+  2. =TABLE
+  3. =INBOX BOXES
+  4. =SIDEBAR
+  5. =RESOURCES
+  M. =MEDIA QUERIES
+*/
+body,
+html {
+  height: 100%;
+}
+body {
+  background-color: #f3f3f4;
+  font-family: 'latoregular', sans-serif;
+  color: #5b6a78;
+  font-size: 16px;
+}
+thead,
+.bold {
+  font-weight: bold;
+}
+.row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 30px;
+}
+table a {
+  color: #92a501;
+}
+table a:hover {
+  color: #738101;
+}
+table a:active,
+table a:visited {
+  color: #657201;
+}
+table .pie-container {
+  width: 15px;
+  height: 15px;
+  display: block;
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+}
+.table-debt td span {
+  position: relative;
+  top: 15px;
+}
+#table-document {
+  min-height: 150px;
+}
+.navbar-right {
+  margin-right: 10px;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none !important;
+  font-weight: normal;
+  color: #ffffff;
+}
+.widget {
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.widget.p-lg {
+  padding: 30px;
+}
+.widget.yellow-bg {
+  background-color: #f8ac59;
+}
+.widget.navy-bg {
+  background-color: #a9be01;
+}
+header {
+  background: #313b44;
+  width: 100%;
+  height: 65px;
+  margin-bottom: 25px;
+}
+header #bs-logo {
+  background: url('../images/bs_logo.png') no-repeat 15px;
+  background-size: 125px;
+  height: 55px;
+  position: relative;
+  top: 5px;
+  width: 140px;
+}
+header .toggle-menu {
+  cursor: pointer;
+  float: right;
+  position: relative;
+  top: 18px;
+  right: 15px;
+  display: none;
+}
+header nav {
+  position: relative;
+  top: 22px;
+  margin-right: 10px;
+}
+header nav .list-inline {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.avatar {
+  float: left;
+  height: 50px;
+  margin: 0 10px 0 0;
+  width: 50px;
+}
+.circle {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0 0 10px 2px #ddd;
+}
+.circle:hover:before {
+  background: rgba(153, 0, 153, 0.2);
+  content: '';
+  position: relative;
+}
+.ibox {
+  clear: both;
+  margin-bottom: 25px;
+  margin-top: 0;
+  padding: 0;
+}
+.ibox .ibox-title {
+  background-color: #ffffff;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 4px 0px 0;
+  color: inherit;
+  margin-bottom: 0;
+  padding: 14px 15px 7px;
+  min-height: 48px;
+}
+.ibox .ibox-content {
+  background-color: #ffffff;
+  color: inherit;
+  padding: 15px 20px 20px 20px;
+  border-color: #e7eaec;
+  border-style: solid solid none;
+  border-width: 1px 0px;
+}
+.ibox .ibox-content .CodeMirror {
+  height: auto;
+}
+.ibox .ibox-content .document-download {
+  color: #7c8b01;
+  font-size: 30px;
+}
+.ibox .ibox-content.doc-page {
+  padding: 100px !important;
+}
+.ibox .ibox-content.doc-page h1,
+.ibox .ibox-content.doc-page p,
+.ibox .ibox-content.doc-page li,
+.ibox .ibox-content.doc-page .text-muted {
+  margin-bottom: 30px;
+}
+.ibox .ibox-content.doc-page h4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.ibox .ibox-content.doc-page textarea {
+  width: 100%;
+  height: 600px;
+  display: block;
+  clear: both;
+  margin-bottom: 35px;
+}
+.ibox .feed-element {
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  border-bottom: 1px solid #e7eaec;
+}
+.ibox .daily-fines-content {
+  overflow-y: auto;
+  max-height: 696px;
+}
+.ibox .ibox-detail {
+  padding: 15px;
+}
+aside {
+  background: #0988ea;
+}
+.contact-box {
+  background-color: #ffffff;
+  border: 1px solid #e7eaec;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.contact-box h3 {
+  font-size: 15px;
+}
+.contact-box img {
+  max-height: 75px;
+}
+.resources h1 {
+  font-size: 1.875em;
+  margin-left: 25px;
+}
+.resources p {
+  font-size: 1.125em;
+  margin-bottom: 25px;
+  margin-left: 25px;
+}
+.resources-list li {
+  margin-bottom: 20px;
+}
+.resources-list li h2 {
+  margin-top: 20px;
+}
+.resources-list li a,
+.resources-list li a:hover,
+.resources-list li a:active,
+.resources-list li a:visited {
+  color: #5b6a78;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 10px 10px;
+  display: block;
+}
+.resources-list li a i,
+.resources-list li a:hover i,
+.resources-list li a:active i,
+.resources-list li a:visited i {
+  font-size: 18px;
+}
+.resources-list li p {
+  font-size: 18px;
+  margin: 20px 0 10px 10px;
+  display: block;
+}
+.resources-list li img {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 0 solid transparent;
+}
+@media only screen and (max-width: 768px) {
+  header .toggle-menu {
+    display: inline-block;
+  }
+  header .navbar-nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    margin: 0;
+    padding: 0;
+    max-width: 130px;
+    background: #465562;
+    z-index: 10;
+    display: none;
+  }
+  header .navbar-nav ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  header .navbar-nav ul li {
+    padding: 6px 20px;
+    display: block;
+    margin: 0;
+  }
+}
+.file-box {
+  float: left;
+}
+.file-box .file {
+  border: 1px solid #e7eaec;
+  padding: 0;
+  background-color: #ffffff;
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.file-box .file .icon,
+.file-box .file .image {
+  padding: 15px 10px;
+  text-align: center;
+  height: 100px;
+  overflow: hidden;
+}
+.file-box .file .icon i,
+.file-box .file .image i {
+  font-size: 70px;
+  color: #dadada;
+}
+.file-box .file .file-name {
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #e7eaec;
+  color: #666;
+}
+.file-box .file .file-name small {
+  color: #676a6c;
+}
+.file-manager {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+.file-manager h5 {
+  text-transform: uppercase;
+}
+.file-manager h5.tag-title {
+  margin-top: 20px;
+}
+.file-manager .file-control {
+  color: inherit;
+  font-size: 11px;
+  margin-right: 10px;
+}
+.file-manager .file-control.active {
+  text-decoration: underline;
+}
+.file-manager .hr-line-dashed {
+  margin: 15px 0;
+  border-top: 1px dashed #e7eaec;
+  color: #ffffff;
+  background-color: #ffffff;
+  height: 1px;
+}
+.file-manager .folder-list li {
+  display: block;
+}
+.file-manager .folder-list li a {
+  color: #a9be01;
+  display: block;
+  padding: 5px 0;
+}
+.file-manager .folder-list li a:visited {
+  color: #657201;
+}
+.file-manager .folder-list li i {
+  margin-right: 8px;
+  color: #3d4d5d;
+}
+.file-manager .folder-list .folder-nivel-one {
+  margin-left: 25px;
+}
+.file-manager .folder-list .catalog-document {
+  cursor: pointer;
+}
+.fn-breadcrum a {
+  color: #a9be01;
+}
+.fn-breadcrum a:visited {
+  color: #657201;
+}

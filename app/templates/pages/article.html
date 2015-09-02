@@ -1,0 +1,157 @@
+
+
+<!-- todo: volver esto una directiva -->
+<div class="row">
+   <div class="col-lg-10 col-lg-offset-1 fn-breadcrum">
+      <ol class="breadcrumb">
+         <li>
+            <a href="#files">FILES</a>
+         </li>
+         <li class="active">
+            <strong>Article</strong>
+         </li>
+      </ol>
+   </div>
+</div>
+
+<!--/ todo: volver esto una directiva -->
+
+
+<div class="row">
+   <div class="col-lg-10 col-lg-offset-1">
+      <div class="ibox">
+         <div class="ibox-content doc-page">
+
+            <div class="text-center article-title">
+               <h1>
+                  My Search
+               </h1>
+            </div>
+
+            
+               <h4><strong>Descripción functional:</strong></h4> 
+
+               <p>El feature de My Searches está compuesto por dos características principales:</p>
+               <ul>
+                    <li>* Búsquedas: Su enfoque estaá en la búsqueda de registros entre la data de Bizagi. Su labor inicia cuando en el panel se despliegan las búsquedas que han sido configuradas para el Stakeholder(s), al seleccionar alguna de las opciones Bizagi ejecuta la búsqueda y mostrar los resultados obtenido.</li>
+
+                    <li>* Filtros: Permite observar información de acuerdo a ciertas condiciones que se configuren en estos, los campos que aparecen inicialmente son los que se muestran en el template que carga la información del registro.</li>
+
+                    <li>* Las búsquedas pueden ser combinadas con los filtros para obtener de esta manera una mejor precisión en el resultado que se quiere ver, es decir, que se puede seleccionar una búsqueda que se haya configurado desde Bizagi Studio y después iniciar con el filtro.</li>
+               </ul>
+        
+           
+              <h4><strong>El objeto de catalogo:</strong></h4>
+               <textarea name="code area ">  {
+                  "changeSet": [
+                    {
+                      "action": "merge",
+                      "type": "156",
+                      "id": "0A6E643F-560C-421B-A6EF-76CC51B90303",
+                      "parentId": "FB86592C-53D1-49E3-B656-7B34C1AA92B2",
+                      "name": "dummyName_0A6E643F-560C-421B-A6EF-76CC51B90303",
+                      "content": {
+                        "displayName": "Search uno",
+                        "enable": true,
+                        "entity": {
+                          "baref": {
+                            "ref": "34CACC74-7122-4C2C-9026-019A7637D1F0"
+                          }
+                        },
+                        "form": {
+                          "baref": {
+                            "ref": "689EE785-AC17-4257-B67A-218973908F93"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+           </textarea>
+            <hr>
+         </div>
+      </div>
+   </div>
+
+    <div class="col-lg-10 col-lg-offset-1">
+      <div class="ibox">
+         <div class="ibox-content doc-page">
+       
+                 <h4><strong>Validaciones:</strong></h4>
+                <ul>
+                    <li>Todos los campos de la ventana de creación de una búsqueda son obligatorios.</li>
+                </ul>
+         
+
+            
+                <h4><strong>Criterios aceptación:</strong></h4>
+                <h5><strong>Escenario 1.</strong></h5>
+                <p>Dado la forma para crear una búsqueda
+                Cuando el usuario introduces todos los datos requeridos
+                Entonces se crea un nuevo changeset de tipo merge asociado al stakeholder seleccionado.
+
+                <h5><strong>Escenario 2.</strong></h5>
+                <p>Dado la forma para crear una búsqueda 
+                Cuando el usuario intenta guardar la búsqueda sin datos 
+                Entonces la forma arroja alertas notificando los campos faltantes por llenar</p>
+
+                <h5><strong>Escenario 3.</strong></h5> 
+                <p>Dado la forma para crear una búsqueda 
+                Cuando el usuario desea crear una nueva forma y le da click en el botón más del campo Form/Forma
+                Entonces se abre el modelador de formas para crear la deseada y este al ser creada debe aparecer en el listado de formas</p>
+
+                <h5><strong>Escenario 4.</strong></h5>
+                <p>Dado la forma para editar una búsqueda existente 
+                Cuando el usuario intenta guardar la búsqueda sin datos 
+                Entonces la forma arroja alertas notificando los campos faltantes por llenar</p>
+
+                <h5><strong>Escenario 5.</strong></h5>
+                <p>Dado la forma para editar una búsqueda existente 
+                Cuando el usuario intenta editar una forma existente y le da click en el icono de editar
+                Entonces se abre el modealdor de formas con los datos de la forma creada, en la cual si se cambia el display Name este se verá reflejado en el listado de formas.</p>
+
+                <h5><strong>Escenario 6.</strong></h5>
+                <p>Dado el lsitado de búsquedas en el nodo de “Mis busquedas” 
+                Cuando el usuario desmarca la casilla de la columna “Habilitar”
+                Entonces Esta búsqueda en ejecución en el work portal no estará disponible</p>
+
+            
+            
+            <hr>
+         </div>
+      </div>
+   </div>
+
+
+
+   <div class="col-lg-10 col-lg-offset-1">
+      <div class="ibox">
+         <div class="ibox-content doc-page">
+       
+                 <h4><strong>MOCKUPS:</strong></h4>
+
+                 <p class="text-center"><img class="img-responsive" src="assets/images/screenshoots/mysearch/1.png" alt=""></p>
+            
+            <hr>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+
+<!-- todo: volver esto una directiva -->
+<div class="row">
+   <div class="col-lg-10 col-lg-offset-1 fn-breadcrum">
+      <ol class="breadcrumb">
+         <li>
+            <a href="#files">FILES</a>
+         </li>
+         <li class="active">
+            <strong>Article</strong>
+         </li>
+      </ol>
+   </div>
+</div>
+
+<!--/ todo: volver esto una directiva -->

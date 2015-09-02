@@ -1,0 +1,22 @@
+//mixins
+.np-normal-font{
+  font-family: @fn-font;
+}
+
+//namespace
+#helpers {
+  .fn-border(@radius, @size, @color) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border: @size solid @color;
+  }
+
+  .fn-position(@position,@top,@right,@bottom:auto,@left:auto) {
+  	position: @position;
+  	top: @top;
+  	right: @right;
+  	bottom: @bottom;
+  	left: @left;;
+  }
+}

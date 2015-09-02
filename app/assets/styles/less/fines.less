@@ -1,0 +1,439 @@
+//less imports
+@import (less) "variables.less";
+@import (less) "mixins.less";
+
+/* CSS DIRECTORY
+  0. =COMMONS
+  1. =HEADER
+  2. =TABLE
+  3. =INBOX BOXES
+  4. =SIDEBAR
+  5. =RESOURCES
+  M. =MEDIA QUERIES
+*/
+
+// 0. COMMONS
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: @second-main-color;
+  font-family: @fn-font;
+  color: @font-color;
+  font-size: @fn-base-font-size;
+}
+
+thead, .bold {
+	font-weight: bold;
+}
+
+.row{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h1{
+	font-size:30px;
+}
+
+table {
+	 a {
+		color: darken(@green, 5%);
+		&:hover {
+			color: darken(@green, 12%)
+		}
+		&:active, &:visited {
+			color: darken(@green, 15%)
+		}
+	}
+
+	.pie-container {
+		width: 15px;
+		height: 15px;
+		display: block;
+		float: left;
+		margin-right: 5px;
+		position: relative;
+		top: 1px;
+	}
+}
+.table-debt td {
+	span {
+		position: relative;
+		top: 15px;
+	} 
+}
+
+#table-document {
+	min-height: 150px;
+}
+
+.navbar-right {
+	margin-right: 10px;
+}
+
+a, a:hover, a:active, a:visited {
+	text-decoration: none !important;
+	font-weight: normal;
+	color: @white;
+}
+
+
+.widget {
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    color: @white;
+
+    &.p-lg {
+    	padding: 30px;
+	}
+
+	&.yellow-bg {
+    	background-color: #f8ac59;
+    	
+	}
+
+	&.navy-bg {
+		background-color: @green;
+	}
+}
+
+
+
+
+// 1. HEADER
+header {
+	background: @third-main-color;
+	width: 100%;
+	height: 65px;
+	margin-bottom:25px;
+
+	#bs-logo {
+		background: url('../images/bs_logo.png') no-repeat 15px;
+		background-size: 125px;
+		height: 55px;
+		position: relative;
+		top: 5px;
+		width: 140px;
+	}
+
+	.toggle-menu {
+		cursor: pointer;
+		float: right;
+		position: relative;
+		top: 18px;
+		right: 15px;
+		display: none;
+	}
+
+	nav {
+		position: relative;
+		top: 22px;
+		margin-right: 10px;
+		.list-inline {
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+	}
+}
+
+// 2. TABLE
+.avatar {
+  float: left;
+  height: 50px;
+  margin: 0 10px 0 0;
+  width: 50px;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0 0 10px 2px #ddd; 
+
+    &:hover:before {
+	  background: rgba(153, 0, 153, 0.2);
+	  content: '';
+	  position: relative;
+    }
+}
+
+// 3. BOXES
+.ibox {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+
+    .ibox-title {
+	    background-color: @white;
+	    border-color: #e7eaec;
+	    border-image: none;
+	    border-style: solid solid none;
+	    border-width: 4px 0px 0;
+	    color: inherit;
+	    margin-bottom: 0;
+	    padding: 14px 15px 7px;
+	    min-height: 48px;
+	}
+
+	.ibox-content {
+	    background-color: @white;
+	    color: inherit;
+	    padding: 15px 20px 20px 20px;
+	    border-color: #e7eaec;
+	    border-style: solid solid none;
+	    border-width: 1px 0px;
+
+	    .CodeMirror {
+	    	height: auto;
+	    }
+
+	    .document-download {
+	    	color: darken(@green, 10%);
+	    	font-size: 30px;
+	    }
+
+	    &.doc-page {
+	    	padding: 100px !important;
+
+	    	h1,p,li,.text-muted{
+	    		margin-bottom: 30px;
+	    	}
+	    	h4 {
+	    		margin-bottom: 20px;
+	    		text-align: center;
+	    	}
+	    	textarea {
+	    		width:100%; height:500px; display:block; clear:both;
+	    		margin-bottom: 35px;
+	    	}
+	    }
+	}
+
+	.feed-element {
+		margin-bottom: 10px;
+		padding-bottom: 15px;
+		overflow: hidden;
+		border-bottom: 1px solid #e7eaec;
+	}
+
+	.daily-fines-content {
+		overflow-y: auto;
+		max-height: 696px;
+	}
+
+	.ibox-detail {
+		padding: 15px;
+	}
+}
+
+// 4. SIDEBAR
+aside {
+	background: @first-main-color;
+}
+
+.contact-box {
+    background-color: @white;
+    border: 1px solid #e7eaec;
+    padding: 20px;
+    margin-bottom: 20px;
+    h3 {
+    	font-size: 15px;
+    }
+
+    img {
+    	max-height: 75px;
+    }
+}
+
+// 5. RESOURCES
+.resources {
+	h1 { font-size: @resources-title-font-size; margin-left: 25px; }
+	p { 
+		font-size: @resources-text-font-size; 
+		margin-bottom: 25px;
+		margin-left: 25px;
+	}
+}
+.resources-list {
+	li{
+		margin-bottom: 20px;
+
+		h2{
+			margin-top: 20px;
+		}
+
+		a, a:hover, a:active, a:visited {
+			color:@font-color;
+			font-size: 22px;
+			font-weight: bold;
+			margin: 0 0 10px 10px; 
+			display: block;
+			i {
+				font-size: 18px;
+			}
+		}
+
+		p { 
+			font-size: 18px; 
+			margin: 20px 0 10px 10px;
+			display: block;
+		}
+
+		img {
+			#helpers > .fn-border(5px, 0, transparent);
+		}
+	}
+}
+
+// M. MEdia queries
+@media only screen and (max-width: 768px) {
+	header {
+		.toggle-menu {
+			display: inline-block;	
+		}
+
+		.navbar-nav {
+				#helpers > .fn-position(absolute,65px,0);
+				margin: 0;
+			    padding: 0;
+			    max-width: 130px;
+			    background: lighten(@third-main-color,10%);
+			    z-index: 10;
+			    display: none;
+
+			    ul {
+			    	text-align: center;
+			    	padding: 0;
+			    	margin: 0;
+
+			    	li {
+			    		padding: 6px 20px;
+			    		display: block;
+			    		margin: 0;
+			    	}
+			    }
+		}
+	}
+}
+
+
+// 6. FILES
+
+.file-box {
+    float: left;
+    .file {
+        border: 1px solid #e7eaec;
+        padding: 0;
+        background-color: @white;
+        position: relative;
+        margin-bottom: 20px;
+        margin-right: 20px;
+
+        .icon, .image {
+            padding: 15px 10px;
+            text-align: center;
+            height: 100px;
+            overflow: hidden;
+            i{
+            	font-size: 70px;
+            	color: #dadada;
+            }
+        }
+
+        .file-name {
+        	padding: 10px;
+        	background-color: #f8f8f8;
+        	border-top: 1px solid #e7eaec;
+        	color: #666;
+        	small {
+        		color: #676a6c;
+        	}
+        }
+    }
+}
+
+
+.file-manager {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    h5 {
+    	text-transform: uppercase;
+    	&.tag-title {
+   			 margin-top: 20px;
+   		}
+	}
+
+	.file-control {
+	    color: inherit;
+	    font-size: 11px;
+	    margin-right: 10px;
+
+	    &.active {
+	    	text-decoration: underline;
+	    }
+	}
+
+	.hr-line-dashed {
+	    margin: 15px 0;
+	    border-top: 1px dashed #e7eaec;
+	    color: @white;
+	    background-color: @white;
+	    height: 1px;
+	}
+
+	.folder-list {
+		li {
+			display: block;
+			a {
+				color: @green;
+				display: block;
+				padding: 5px 0;
+				&:visited {
+					color: darken(@green, 15%)
+				}
+			}
+			i {
+				margin-right: 8px;
+				color: #3d4d5d;
+			}
+		}
+
+		.folder-nivel-one {
+			margin-left: 25px;
+		}
+
+		.catalog-document {
+			cursor: pointer;
+		}
+	}
+}
+
+.fn-breadcrum {
+	a {
+		color: @green;
+		&:visited {
+			color: darken(@green, 15%)
+		}
+	}
+}
+
+
+//css imports
+@import (css) "libs/reset.css";
+@import (css) "libs/loader.css";
+@import (css) "libs/fullcalendar.css";
+@import (css) "libs/font-awesome.css";
+@import (css) "libs/bootstrap.css";
+@import (css) "libs/codemirror.css";
+@import (css) "fonts/lato.css"; 
