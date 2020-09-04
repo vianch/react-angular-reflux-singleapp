@@ -39,7 +39,7 @@
     "jquery": "^3.4.1",
     "parse": "^1.5.0",
     "parse-react": "^0.4.2",
-    "react": "^0.13.3",
+    "react": "^0.14.9",
     "react-simple-pie-chart": "^0.2.0",
     "reflux": "^0.2.12",
     "uid": "0.0.2"
